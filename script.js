@@ -9,8 +9,15 @@ document.getElementById("myp").onclick = function(){
 function validate(){
       
      var usr = document.getElementById("username").value;
-     if (usr == "12345")
+     var matches = usr.match(/\d+/g);
+	
+	if (usr == "12345")
      	alert("You are right");
+	
+	else if (matches != null) {
+    	alert(" Username has atleast one number");
+	}
+     
      else
      	alert("You are not right");
 
